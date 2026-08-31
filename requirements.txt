@@ -1,0 +1,13 @@
+# --- Core: always needed ---
+mcp>=1.2.0,<2.0       # MCP server SDK — 2.x removed mcp.server.fastmcp, so stay on 1.x (tested on 1.27.0)
+numpy>=1.24           # vector math for semantic search
+starlette>=0.37       # ASGI app + HTTP endpoints + the x402 middleware
+uvicorn>=0.30         # ASGI server to run it
+httpx>=0.27           # facilitator client + agent client
+eth-account>=0.13     # sign EIP-3009 payments (the real x402 "exact" scheme)
+
+# --- Real semantic embeddings (recommended default) ---
+# Pulls in torch; downloads a small (~90MB) model on first run.
+# If you'd rather not install this yet, set EMBEDDINGS_PROVIDER=hashing
+# and you can skip it — everything else still runs.
+sentence-transformers>=2.2

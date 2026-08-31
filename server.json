@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.eduval91/agent-memory",
+  "description": "Persistent, semantically searchable memory for autonomous agents. Store facts and retrieve them by meaning, not keywords. Pay per operation with x402 \u2014 no account, no API key.",
+  "version": "1.0.0",
+  "websiteUrl": "https://agent-memory-server.fly.dev",
+  "repository": {
+    "url": "https://github.com/eduval91/agent-memory-server",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agent-memory-server.fly.dev/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "tags": [
+        "memory",
+        "search",
+        "embeddings",
+        "storage",
+        "x402"
+      ],
+      "pricing": "pay-per-call in USDC via x402 on Base; no subscription, no API key. store 0.002 / search 0.01 / retrieve 0.001 USDC; get_pricing is free.",
+      "tools": [
+        "get_pricing \u2014 free; list operations and prices",
+        "store_memory \u2014 save a memory",
+        "search_memory \u2014 semantic search over your memories",
+        "retrieve_memory \u2014 fetch one memory by id"
+      ]
+    }
+  }
+}
