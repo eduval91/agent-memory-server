@@ -6,3 +6,8 @@ data/
 .agent-wallet
 *.log
 .DS_Store
+
+# macOS duplicate-file copies (e.g. "config 2.py", "payments copy.py")
+* [0-9].*
+* copy.*
+.Rhistory
